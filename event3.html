@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View more</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="css/teams2.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+  
+    <link rel="icon" href="images/favicon1.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/event1.css">
+</head>
+<body>
+    <nav>
+        <ul class="navlinks">
+          <li class="active"><a href="index.html"><img class="evolveailogo" src="images/evolveailogo1.png" alt="photo"></a></li>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="events.html">Events</a></li>
+          <li class="active"><a href="teams.html">Team Evolve AI</a></li>
+          <li class="active"><a href="contact.html">Contact Us</a></li>
+          <li class="active"><a href="https://www.chitkara.edu.in"><img class="chitkaralogo" src="images/CHITKARA LOGO.png" alt="photo"></a></li>
+        </ul>
+        <img src="images/list.svg" class="menu-btn">
+    </nav>
+    
+    <script>
+        const menubtn = document.querySelector('.menu-btn');
+        const navlinks = document.querySelector('.navlinks');
+        const body = document.querySelector('body');
+      
+        menubtn.addEventListener('click', () => {
+          navlinks.classList.toggle('mobile-menu');
+        });
+      
+        body.addEventListener('click', (event) => {
+          if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+            navlinks.classList.remove('mobile-menu');
+          }
+        });
+      
+        // Add click event listener to all anchor tags within the navbar
+        const navLinks = document.querySelectorAll('.navlinks a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            // Close the mobile menu when a link is clicked
+            navlinks.classList.remove('mobile-menu');
+          });
+        });
+    </script>
+    <section>
+        <div class="border">
+          <div class="content">
+          <h1>Objectives of the event:</h1>
+          <p>"AI Renaissance: Cultivating the Seeds of Tomorrow's Tech" is a pillar of our continuing endeavors to bring pioneering minds together to talk about the emerging area of artificial intelligence and its enormous implications. The occasion featured a project presentation by several brilliant Chitkara University students. In addition, four special guests shared their extensive experience on a range of AI-related topics with us. The topics of discussion included the recent rise of artificial intelligence, its economic potential, its impact on human cognizance, the opportunities it has generated for employment, the hazards it poses, and the regulations that will mitigate these risks while preserving a sustainable way of life.</p>
+          </div>
+        </div>
+        <div class="border">
+          <div class="content">
+          <h1 class="text-right">Outcomes of the event:</h1>
+          <p class="text-right">"AI Renaissance: Cultivating the Seeds of Tomorrow's Tech" has equipped students with wisdom on several AI-related topics like its history, its economic potential, and its potential emergence as a cognitive marvel. Its effect on human cognizance, and the ethics necessary for AI development. Students also realized the skill requirements in this job market. Numerous young talents were also enabled to showcase their initiated projects at this event. By the end of the program, the speakers had inspired the students to pursue a career in AI with adaptability as a key skill and to contribute to its advancement.</p>
+          </div>
+        </div>
+        <div class="border">
+          <div class="content">
+          <h1>Benefits of the event:</h1>
+          <p> Empowering AI Talent, Inspiring Innovations.</p>
+          </div>
+        </div>
+    </section> 
+    <section>
+      <div>
+        <img>
+        <img>
+        <img>
+      </div>
+    </section>
+</div>
+</div>
+<div class="contact-headings">
+    <div class="contact-item">
+        <img src="images/evolveailogo1.png" alt="logo">
+    </div>
+    <div class="contact-item">
+        <h4 class="contact-heading text-center">Address</h4>
+        <p class="contact-info">Chitkara University<br>
+            Chandigarh-Patiala National Highway (NH-64)<br>
+            Rajpura, Punjab 140401<br>
+        </p>
+    </div>
+
+    <div class="contact-item-right">
+        <h4 class="contact-heading text-center">Socials</h4>
+        <p class="contact-info">
+            <i class="fa fa-linkedin" ></i><a class="contact-links" href="https://www.linkedin.com/company/evolveai-cuiet/" target="_blank">Linkedin</a><br>
+            <i class="fa fa-instagram"></i><a class="contact-links" href="https://www.instagram.com/evolveai_cuiet/" target="_blank">Instagram</a><br>
+            <i class="fa fa-youtube"></i><a class="contact-links" href="https://www.youtube.com/@evolveai_cuiet" target="_blank">Youtube</a>
+        </p>
+    </div>
+
+
+</div>
+
+<div class="copyright">
+    <p>&copy;2024 . All Rights Reserved</p>
+    <a href="terms.html">Terms & Conditions |</a>
+    <a href="privacy.html">Privacy Policy</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Evolve AI</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="index.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+        type="text/css" />
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="images/favicon1.png" type="image/x-icon">
+                    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/TextPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body class="body">
+    <nav >
+
+        <ul class="navlinks">
+            <li class="active"><a href="index.html"><img class="evolveailogo" src="images/evolveailogo1.png"
+                        alt="photo"></a></li>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="active"><a href="events.html">Events</a></li>
+            <li class="active"><a href="teams.html">Team Evolve AI</a></li>
+            <li class="active"><a href="contact.html">Contact Us</a></li>
+            <li class="active"><a href="https://www.chitkara.edu.in"><img class="chitkaralogo"
+                        src="images/chitkaralogo.png" alt="photo"></a></li>
+        </ul>
+        <img src="images/list.svg" class="menu-btn">
+    </nav>
+
+    <script>
+        const menubtn = document.querySelector('.menu-btn');
+        const navlinks = document.querySelector('.navlinks');
+        const body = document.querySelector('body');
+
+        menubtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu');
+        });
+
+        body.addEventListener('click', (event) => {
+            if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+                navlinks.classList.remove('mobile-menu');
+            }
+        });
+
+        // Add click event listener to all anchor tags within the navbar
+        const navLinks = document.querySelectorAll('.navlinks a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Close the mobile menu when a link is clicked
+                navlinks.classList.remove('mobile-menu');
+            });
+        });
+    </script>
+
+    <section class="section home-5-bg" id="home">
+
+        <div class="home-center">
+
+            <div class="home-desc-center">
+
+                <h1 class="headinghome">
+                    EV
+                    <span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="rocketlogo bi bi-gear-wide-connected"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5m0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78zM5.048 3.967l-.087.065zm-.431.355A4.98 4.98 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8zm.344 7.646.087.065z" />
+                        </svg>
+
+                    </span>
+                    LVE AI
+                </h1>
+
+                <p id="text" class="text">Where Innovation Meets Evolution</p>
+
+                <p class="buttoncontainer">
+                    <a href="events.html" class="homepagebutton" id="button1">Register for upcoming events</a>
+                    <a href="#sectionabout" class="homepagebutton2" id="button2">Know more about Evolve AI<span></span></a>
+                </p>  
+            </div>
+            <div class="extras">
+                <div>
+                    <h1>28+</h1>
+                    <p>Events Organized</p>
+                </div>
+                <div>
+                    <h1>28</h1>
+                    <p>Members</p>
+                </div>
+                <div>
+                    <h1>640+</h1>
+                    <p>Social Media Followers</p>
+                </div>
+                <div>
+                    <h1>11+</h1>
+                    <p>Collaborations</p>
+                </div>
+            </div>
+           
+
+    </section>
+
+    <section class="sectionorganize">
+        <h1 class="headingorganize text-left">What do we organize for you?</h1>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.to(".headingorganize",{
+              x: 0,
+              duration: 3,
+              opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".headingorganize",
+            scrub: true 
+        }
+        })
+          </script>
+        <div class="containerorganize">
+            <div style="border-top: 1px solid black;" class="organizediv1">
+                <h3><span style="font-size: 9vmin;">0</span>1</h3>
+                <h2>Tech Events</h2>
+                <p>
+                    Evolve AI organises tech based events to cultivate the technical minds of the university.
+                </p>
+            </div>
+            <script>
+                  gsap.registerPlugin(ScrollTrigger);
+            gsap.to(".organizediv1",{
+              x: 0,
+              duration: 2,
+              opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".organizediv1",
+            start:"top center",
+            end:"center center",
+            scrub: true 
+        }
+            })
+            </script>
+            <div class="organizediv2">
+                <h3><span style="font-size: 9vmin;">0</span>2</h3>
+                <h2>Hackathons</h2>
+                <p>AI-themed hackathons arranged by EVOLVE-AI are the competitions where participants collaborate to solve real world problem statements with AI-based solutions within a limited time frame to win exciting prizes. It promotes teamwork and problem solving skills.  </p>
+            </div>
+            <script>
+                gsap.registerPlugin(ScrollTrigger);
+          gsap.to(".organizediv2",{
+            x: 0,
+            duration: 2,
+            opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".organizediv2",
+            start:"top center",
+            end:"center center",
+            scrub: true 
+        }
+          })
+          </script>
+            <div class="organizediv3">
+                <h3><span style="font-size: 9vmin;">0</span>3</h3>
+                <h2>Workshops</h2>
+                <p>Evolve-AI organises workshops to help students gain practical skills, knowledge and valuable insights relevant to AI. 
+                </p>
+            </div>
+            <script>
+                gsap.registerPlugin(ScrollTrigger);
+          gsap.to(".organizediv3",{
+            x: 0,
+            duration: 2,
+            opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".organizediv3",
+            start:"top center",
+            end:"center center",
+            scrub: true 
+        }
+    
+          })
+          </script>
+            <div class="organizediv4">
+                <h3><span style="font-size: 9vmin;">0</span>4</h3>
+                <h2>Expert Talks</h2>
+                <p>Evolve-AI organises guest lectures by professionals from all over India specialised in the domains of their expertise relevant to AI. This helps the students in networking with professionals and get a guidance they seek to build a better future for themselves. 
+
+                </p>
+            </div>
+            <script>
+                gsap.registerPlugin(ScrollTrigger);
+          gsap.to(".organizediv4",{
+            x: 0,
+            duration: 2,
+            opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".organizediv4",
+            start:"top center",
+            end:"center center",
+            scrub: true 
+        }
+    
+          })
+          </script>
+        </div>
+
+    </section>
+
+    <section class="sectionabout" id="sectionabout">
+        <h1 class="headingabout text-left">A Legacy of Evolve AI & A look to the future</h1>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".headingabout",{
+        scale: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".headingabout",
+              
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      </script>
+
+        <div>
+            <div class="contentabout contentorigin">
+                <h2>Our <span style="color: #B27EFF;">Origin</span></h2>
+                <p>EvolveAI began its journey as a club consisting of ambitious team members within Chitkara University's Department of Computer Science & Engineering (Artificial Intelligence) in 2021. It is guided by visionaries like Dr. Sushil Kumar Narang and driven by dedicated individuals like Dr. Kamal Deep Garg and Dr. Vandana Sood. EvolveAI aspires to nurture a vibrant community centered around Artificial Intelligence. Our motive is to empower future AI leaders by offering the students exceptional opportunities for learning, growth, and contribution in the dynamic realm of AI. 
+                
+                </p>
+            </div>
+            <img class="imageorigin" src="images/origin (2).svg">
+        </div>
+
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.to(".contentorigin", {
+                x: 0,
+                duration: 2,
+                opacity: 1,
+                ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".contentorigin",
+                    start: "top center", // Adjust this according to when you want the animation to start
+                    end: "center center", // Adjust this according to when you want the animation to end
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+            });
+        
+            gsap.to(".imageorigin", {
+                x: 0,
+                duration: 2,
+                opacity: 1,
+                ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".imageorigin",
+                    start: "top center", // Adjust this according to when you want the animation to start
+                    end: "center center", // Adjust this according to when you want the animation to end
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+            });
+        </script>
+        
+        <div class="triggervision">
+            <img class="imagevision"  src="images/vision.svg">
+            <div class="contentabout contentvision">
+                <h2 class="text-right">Our <span style="color: #FF6C6C;">Vision</span></h2>
+                <p class="text-right">We believe fostering collaboration and innovation in students is essential for them to thrive in the AI landscape. We want to help students achieve it through massive initiatives such as technical workshops, hackathons, competitions, and other interactive sessions. EvolveAI aims to cultivate a culture of perpetual learning and exploration among AI enthusiasts. The club believes that with the right guidance, resources, and mentorship, it can endeavor to equip students with the skills, knowledge, and connections necessary to emerge proficiently as AI leaders and practitioners. EvolveAI envisions a future where its members confidently lead the charge in AI research, engineering, and product development, catalyzing innovation and imaginative applications for the advancement of society.
+                </p>
+            </div>
+     
+        </div>
+     <script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".contentvision", {
+        y: 0,
+        duration: 3,
+        opacity: 1,
+        ease: "power2.out", // Experiment with different easing functions
+        scrollTrigger: {
+            trigger: ".contentvision",
+            start: "top center", // Adjust this according to when you want the animation to start
+            end: "center center", // Adjust this according to when you want the animation to end
+            scrub: true // Smoothly scrub through the animation as you scroll
+        }
+    });
+
+    gsap.to(".imagevision", {
+        y: 0,
+        duration: 3,
+        opacity: 1,
+        ease: "power2.out", // Experiment with different easing functions
+        scrollTrigger: {
+            trigger: ".triggervision",
+            start: "top center", // Adjust this according to when you want the animation to start
+            end: "center center", // Adjust this according to when you want the animation to end
+            scrub: true // Smoothly scrub through the animation as you scroll
+        }
+    });
+</script>
+
+        <div class="triggercontemporary">
+            <div class="contentabout contentcontemporary">
+                <h2>Our <span style="color: #3D9DF3;">Contemporary</span></h2>
+                <p>In the present-day scenario, EvolveAI remains a vibrant epicentre for AI enthusiasts. The club is actively working on upholding its steadfast commitment to organizing events, fostering collaborations, and engaging with industry professionals to not only retain but also upgrade its position as a frontrunner in AI education and innovation. We all are living in an era where AI is revolutionising every sector, EvolveAI assumes a pivotal role in shaping the next cohort of AI pioneers. To accomplish it we as a team has been working on the simple yet effective approach of facilitating access to cutting-edge resources, advocating for interdisciplinary learning, and cultivating a nurturing ecosystem,  empowering students to pursue careers in AI research, engineering, and entrepreneurship. As the demand for AI expertise continues its ascent, EvolveAI remains steadfast in its dedication to inspiring and preparing students to make impactful contributions to the realm of Artificial Intelligence.</p>
+            </div>
+            <img class="imagecontemporary" src="images/conttemporary.svg">
+        </div>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.to(".contentcontemporary", {
+                x: 0,
+                duration: 3,
+                opacity: 1,
+                ease: "power2.out", // Experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".contentcontemporary",
+                    start: "top center", // Adjust this according to when you want the animation to start
+                    end: "center center", // Adjust this according to when you want the animation to end
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+            });
+        
+            gsap.to(".imagecontemporary", {
+                y: 0,
+                duration: 3,
+                opacity: 1,
+                ease: "power2.out", // Experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".contentcontemporary",
+                    start: "top center", // Adjust this according to when you want the animation to start
+                    end: "center center", // Adjust this according to when you want the animation to end
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+            });
+        </script>
+    </section>
+
+    <section class="eventsection" data-color="black">
+        <h1 class="headingevent text-left">Our Past Events</h1>
+        <script>
+
+                gsap.registerPlugin(ScrollTrigger);
+          gsap.to(".headingevent",{
+            x: 0,
+            duration: 1,
+            opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".headingevent",
+            scrub: true 
+        }
+    
+          })
+          </script>
+
+        <div class="content eventtransition">
+
+            <div class="">
+
+                <div class="d-flex carousel-nav">
+                    <a href="#" class="col active">Workshop on AI</a>
+                    <a href="#" class="col">Intersect: Confluence of ideas</a>
+                    <a href="#" class="col">AI Renaissance</a>
+                </div>
+
+             
+
+                <div class="owl-carousel owl-1">
+
+                    <div class="media-29101 d-md-flex w-100">
+                        <div class="img">
+                            <img src="images/acerworkshop.png" alt="Image">
+                        </div>
+                        <div class="text">
+                            <a class="category d-block mb-4" href="#">Wokshop &mdash; March 13,2024</a>
+                            <h2><a href="#">Workshop on AI for emerging trends & technologies in education</Title></a>
+                            </h2>
+                            <p>"AI For Emerging Trends and Technologies in Education" was a special workshop powered by
+                                Acer and Microsoft. The workshop enlightened the audience on the impact of the
+                                availability and affordability of good technology for AI development and how Acer is
+                                providing the common man access to such technology.</p>
+                        </div>
+                    </div> <!-- .item -->
+
+                    <div class="media-29101 d-md-flex w-100">
+                        <div class="img">
+                            <img src="images/posterpresentation.png" alt="Image" class="img-fluid">
+                        </div>
+                        <div class="text">
+                            <a class="category d-block mb-4" href="#">Competition &mdash; March 13, 2024</a>
+                            <h2><a href="#">Intersect: Confluence of Ideas</a></h2>
+                            <p>“Intersect: Confluence of Ideas- A Multidisciplinary Poster Presentation Showcasing
+                                Innovative Solutions using Design Thinking and Critical Thinking” was a golden
+                                opportunity for all the departments from the university to represent their department
+                                and their ideas in front of an esteemed jury. They proposed solutions inculcating
+                                Artificial Intelligence to the problems from their own departments showcasing their
+                                skill full mindset.</p>
+                        </div>
+                    </div> <!-- .item -->
+
+                    <div class="media-29101 d-md-flex w-100">
+                        <div class="img">
+                            <img src="images/AiRenaissance.png" alt="Image" class="img-fluid">
+                        </div>
+                        <div class="text">
+                            <a class="category d-block mb-4" href="#">Summit &mdash; February 2, 2024</a>
+                            <h2><a href="#">AI Renaissance</a></h2>
+                            <p>"AI Renaissance: Cultivating Tomorrow's Tech" convened brilliant Chitkara University
+                                students for project presentations, alongside expert discussions on AI's economic
+                                potential, impact on cognition, employment opportunities and the need for regulations to
+                                ensure a sustainable future. The event aimed to foster collaboration and exploration in
+                                the rapidly evolving field of artificial intelligence.</p>
+                        </div>
+                    </div> <!-- .item -->
+                </div>
+            </div>
+        </div>
+        <script>
+
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".eventtransition",{
+        y: 0,
+        duration: 2,
+        opacity: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".eventtransition",
+        scrub: true 
+    }
+
+      })
+      </script>
+    </section>
+
+    <section class="logos">
+        <h1 class="headingslider text-right">Bridging the Gap: Our Events with Industry Leaders</h1>
+        <script>
+
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".headingslider",{
+        x: 0,
+        duration: 2,
+        opacity: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".logos",
+        start: "top center",
+        end: "bottom center",
+        scrub: true 
+    }
+
+      })
+      </script>
+        <div class="wrapper">
+            <div class="slider">
+                <div class="slide">
+                    <img src="images/LOGO/ACER LOGO.png" />
+                    <img src="images/LOGO/ADAPTIVENT LOGO.png" />
+                    <img src="images/LOGO/COROVER LOGO.png" />
+                    <img src="images/LOGO/EMIDS LOGO.png" />
+                    <img src="images/LOGO/GIVE_MY_CERTIFICATE LOGO.png" />
+                    <img src="images/LOGO/INGRAM MICRO LOGO.png" />
+                    <img src="images/LOGO/MICROSOFT LOGO.png" />
+                    <img src="images/LOGO/NEC_CO-OPERATION_LOGO.png">
+                    <img src="images/LOGO/SAP LOGO.png">
+                    <img src="images/LOGO/SEARS LOGO.png">
+                    <img src="images/LOGO/SOPRA STERIA.png">
+                </div>
+                <div class="slide">
+                    <img src="images/LOGO/ACER LOGO.png" />
+                    <img src="images/LOGO/ADAPTIVENT LOGO.png" />
+                    <img src="images/LOGO/COROVER LOGO.png" />
+                    <img src="images/LOGO/EMIDS LOGO.png" />
+                    <img src="images/LOGO/GIVE_MY_CERTIFICATE LOGO.png" />
+                    <img src="images/LOGO/INGRAM MICRO LOGO.png" />
+                    <img src="images/LOGO/MICROSOFT LOGO.png" />
+                    <img src="images/LOGO/NEC_CO-OPERATION_LOGO.png">
+                    <img src="images/LOGO/SAP LOGO.png">
+                    <img src="images/LOGO/SEARS LOGO.png">
+                    <img src="images/LOGO/SOPRA STERIA.png">
+                </div>
+            </div>
+        </div>
+        <script>
+
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".wrapper",{
+        scale: 1,
+        duration: 2,
+        opacity: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".logos",
+        start: "top center",
+        end: "bottom center",
+        scrub: true 
+    }
+
+      })
+      </script>
+    </section>
+
+    <div class="container-fluid faqcontainer" id="faq" data-color="black">
+        <h2 class=" text-left headingfaq">Frequently Asked Questions</h2>
+        <script>
+
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".headingfaq",{
+        scale: 1,
+        duration: 2,
+        opacity: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".headingfaq",
+       
+        scrub: true 
+    }
+
+      })
+      </script>
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a class="first" role="button" data-toggle="collapse" data-parent="#accordion"
+                                    href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What is evolve AI currently upto?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                            aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>- Evolve AI seeks collaboration with top-tier companies and <span
+                                        style="color: #3D9DF3;">industry experts</span>.<br><br>
+                                    - Aim to mentor and <span style="color: #3D9DF3;">support young AI
+                                        enthusiasts</span> in the community.<br><br>
+                                    - Offer workshops, expert talks, and projects for <span
+                                        style="color: #3D9DF3;">skill development</span>.<br><br>
+                                    - Encourage guidance and <span style="color: #3D9DF3;">nurturing of talent</span> in
+                                    the field of AI.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                    href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Who can be a member at Evolve AI?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>Is AI your passion? Whether it is your ambition to research and unvield revolutionary
+                                    breakthroughs,
+                                    or your skills and knowledge in developing AI-ML models that can benefit
+                                    society, as long as
+                                    you possess the skillset and have a desire to learn and engage with us, you are
+                                    welcome to the
+                                    community!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion"
+                                    href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What has been Evolve AI's biggest achievement yet?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>- <span style="color:  #3D9DF3; font-weight: 700;">Industrial collaboration with
+                                        Ikigai Labs</span>: Establishing a groundbreaking <span
+                                        style="color: #3D9DF3;">Computer Vision workshop</span>, setting a new standard
+                                    in collaboration between academia and industry.<br><br>
+
+                                    - <span style="color:  #3D9DF3; font-weight: 700;">AI.Create() awareness
+                                        campaign</span>: Spreading knowledge about <span
+                                        style="color: #3D9DF3;">Generative AI</span>, contributing to the
+                                    democratization of AI technologies and fostering innovation.<br><br>
+
+                                    - <span style="color:  #3D9DF3; font-weight: 700;">Founding of the AI Club</span>:
+                                    Pioneering the first AI-focused community at Chitkara University, fostering a
+                                    culture of AI-driven problem-solving and project development.<br><br>
+
+                                    - <span style="color:  #3D9DF3; font-weight: 700;">Central hub for AI
+                                        projects</span>: Positioning the AI Club as the go-to platform for tackling
+                                    significant challenges through AI, consolidating expertise and resources for <span
+                                        style="color:  #3D9DF3;">impactful solutions</span>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingfour">
+                            <h4 class="panel-title">
+                                <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion"
+                                    href="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                    After becoming a member, can I be guided on my future projects?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapsefour" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingfour">
+                            <div class="panel-body">
+                                <p>Evolve AI team would feel delighted to guide all the <span
+                                        style="color:  #3D9DF3;">tech enthusiastic members</span> with
+                                    their future projects. This club is not just an experience but also a community to
+                                    foster
+                                    collaboration, knowledge sharing, and skill development.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingfive">
+                            <h4 class="panel-title">
+                                <a class="collapsed last" role="button" data-toggle="collapse" data-parent="#accordion"
+                                    href="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                    How can new members actively contribute to the growth and success of Evolve AI?
+                                    <span> </span>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapsefive" class="panel-collapse collapse" role="tabpanel"
+                            aria-labelledby="headingfive">
+                            <div class="panel-body">
+                                <p>You should accomplish all the tasks given to you on a satisfactory level. Also, by
+                                    regularly
+                                    attending club <span style="color:  #3D9DF3;">meetings</span>, <span
+                                        style="color:  #3D9DF3;">workshops</span>, and <span
+                                        style="color:  #3D9DF3;">events</span>. This not only keeps you informed
+                                    about club activities but also provides opportunities to connect with other members
+                                    and share your
+                                    perspectives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".row",{
+        y: 0,
+        duration: 2,
+        opacity: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".faqcontainer",
+        start: "top center",
+        end: "center center",
+        scrub: true 
+    }
+
+      })
+      </script>
+    </div>
+
+    <section class="reviewssection">
+        <h1 class="headingreviewsection text-right">The Event Experience: In  their own words</h1>
+        <script>
+
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".headingreviewsection",{
+        x: 0,
+        duration: 2,
+        opacity: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".headingreviewsection",
+  
+        scrub: true 
+    }
+
+      })
+      </script>
+        <div class="contentreviews">
+            <div style="border-top: 1px solid black;" class="div div1">
+                <h1>Sanch<br><span style="font-size: 2vmin; color: gray;">Department - CSE-AI</span></h1>
+                <p> Great Session and Good Experience. The questions asked by the judges were good and helped clarify
+                    the idea of each team.</p>
+            </div>
+            <script>
+
+                gsap.registerPlugin(ScrollTrigger);
+          gsap.to(".div1",{
+            x: 0,
+            duration: 2,
+            opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".div1",
+            scrub: true 
+        }
+    
+          })
+          </script>
+            <div class="div div2">
+                <p>The speakers had a vast knowledge of the industry and they helped us by sharing their valuable
+                    insights from the industry. the event was an excellent way to interact with industry experts and to
+                    know about our role in the industry.</p>
+                <h1>Himanish Kaushal<br><span style="font-size: 2vmin; color: gray;">Department - CSE-AI</span></h1>
+            </div>
+            <script>
+
+                gsap.registerPlugin(ScrollTrigger);
+          gsap.to(".div2",{
+            y: 0,
+            duration: 4,
+            opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".div1",
+          
+            scrub: true 
+        }
+    
+          })
+          </script>
+            <div class="div div3">
+                <h1>Navya Jain<br><span style="font-size: 2vmin; color: gray;">Department - CSE-AI</span></h1>
+                <p> Information given was excellent and useful. Sir was explaining in full details and was solving our
+                    doubt</p>
+            </div>
+            <script>
+
+                gsap.registerPlugin(ScrollTrigger);
+          gsap.to(".div3",{
+            x: 0,
+            duration: 4,
+            opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".div3",
+          
+            scrub: true 
+        }
+    
+          })
+          </script>
+            <div class="div div4">
+                <p>Speaker's way of explaining was excellent!!</p>
+                <h1>Jatin Kumar<br><span style="font-size: 2vmin; color: gray;">Department - CSE-AI</span></h1>
+            </div>
+            <script>
+
+                gsap.registerPlugin(ScrollTrigger);
+          gsap.to(".div4",{
+            y: 0,
+            duration: 4,
+            opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".div3",
+          
+            scrub: true 
+        }
+    
+          })
+          </script>
+            <div class="div div5">
+                <h1>Bhuvan Goyal<br><span style="font-size: 2vmin; color: gray;">Department - CSE-AI</span></h1>
+                <p> The insights provided by sir related to problems faced by businesses. The way of presentation and
+                    interacting with the students</p>
+            </div>
+            <script>
+
+                gsap.registerPlugin(ScrollTrigger);
+          gsap.to(".div5",{
+            x: 0,
+            duration: 4,
+            opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".div4",
+          
+            scrub: true 
+        }
+    
+          })
+          </script>
+            <div class="div div6">
+                <p> I found the seminar to be incredibly enlightening and engaging. What stood out to me was the
+                    comprehensive exploration of how data science and AI are transforming industries, particularly
+                    through compelling examples from companies like Netflix and Amazon. The speakers' expertise and
+                    passion made the sessions both informative and enjoyable, fostering stimulating discussions among
+                    attendees.</p>
+                    <h1>Dewansh Jha<br><span style="font-size: 2vmin; color: gray;">Department - CSE-AI</span></h1>
+            </div>
+            <script>
+
+                gsap.registerPlugin(ScrollTrigger);
+          gsap.to(".div6",{
+            y: 0,
+            duration: 4,
+            opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".div5",
+          
+            scrub: true 
+        }
+    
+          })
+          </script>
+        </div>
+    </section>
+
+    <div class="contact-headings">
+        <div class="contact-item">
+            <img src="images/evolveailogo1.png" alt="logo">
+        </div>
+        <div class="contact-item">
+            <h4 class="contact-heading text-center">Address</h4>
+            <p class="contact-info">Chitkara University<br>
+                Chandigarh-Patiala National Highway (NH-64)<br>
+                Rajpura, Punjab 140401<br>
+            </p>
+        </div>
+
+        <div class="contact-item-right">
+            <h4 class="contact-heading text-center">Socials</h4>
+            <p class="contact-info">
+                <i class="fa fa-linkedin" ></i><a class="contact-links" href="https://www.linkedin.com/company/evolveai-cuiet/" target="_blank">Linkedin</a><br>
+                <i class="fa fa-instagram"></i><a class="contact-links" href="https://www.instagram.com/evolveai_cuiet/" target="_blank">Instagram</a><br>
+                <i class="fa fa-youtube"></i><a class="contact-links" href="https://www.youtube.com/@evolveai_cuiet" target="_blank">Youtube</a>
+            </p>
+        </div>
+
+
+    </div>
+
+    <div class="copyright">
+        <p>&copy;2024 . All Rights Reserved</p>
+        <a href="terms.html">Terms & Conditions |</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+    </script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js">
+    </script>
+
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js">
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <script src="js/owl.carousel.min.js">
+    </script>
+
+    <script src="js/main.js">
+    </script>
+
+</body>
+
+</html>

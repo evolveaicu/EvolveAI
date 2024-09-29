@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" -->
+        <!-- integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link href="css/teams2.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Teams</title>
+  
+    <link rel="icon" href="images/favicon1.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/TextPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body class="body">
+    <nav>
+    
+        <ul class="navlinks">
+          <li class="active"><a href="index.html"><img class="evolveailogo" src="images/evolveailogo1.png" alt="photo"></a></li>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="events.html">Events</a></li>
+          <li class="active"><a href="teams.html">Team Evolve AI</a></li>
+          <li class="active"><a href="contact.html">Contact Us</a></li>
+          <li class="active"><a href="https://www.chitkara.edu.in"><img class="chitkaralogo" src="images/CHITKARA LOGO.png" alt="photo"></a></li>
+        </ul>
+        <img src="images/list1.svg" class="menu-btn">
+      </nav>
+
+      <script>
+        const menubtn = document.querySelector('.menu-btn');
+        const navlinks = document.querySelector('.navlinks');
+        const body = document.querySelector('body');
+      
+        menubtn.addEventListener('click', () => {
+          navlinks.classList.toggle('mobile-menu');
+        });
+      
+        body.addEventListener('click', (event) => {
+          if (!event.target.closest('.menu-btn') && !event.target.closest('.navlinks li')) {
+            navlinks.classList.remove('mobile-menu');
+          }
+        });
+      
+        // Add click event listener to all anchor tags within the navbar
+        const navLinks = document.querySelectorAll('.navlinks a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            // Close the mobile menu when a link is clicked
+            navlinks.classList.remove('mobile-menu');
+          });
+        });
+      </script>
+
+    
+    <section class="sectionfaculty">
+        <h1 class="headingdean text-left">Pillars of Evolve AI</h1>
+        <div class="contentdean">
+            <div>
+                <img class="deansirimage" src="images/DeanSirimage.JPG" alt="image">
+            </div>
+  
+            <div class="contentfaculty">
+                <h1>Dr. Sushil Narang</h1>
+                <h6>Dean - CSE AI</h6>
+                <p>Our esteemed founder and advisor, Dr. Sushil Narang is the Dean of CSEAI at Chitkara University. With a Ph.D. in Computer Science from Punjab University and expertise in deep learning, Dr. Narang propels our team forward with unparalleled vision and wisdom. His guidance ignites innovation and fosters an environment where every member thrives.</p>
+            </div>
+    
+        </div>
+        <div class="contentfacultymain">
+            <div class="contentfaculty2main reverse">
+                <div class="contentfaculty2 facultyanimation1">
+                    <h1>Dr. Kamal Deep Garg</h1>
+                    <h6>Lead - Evolve AI</h6>
+                    <p>Dr. Kamal Deep Garg, Assistant Professor at Chitkara University holds a Ph.D. in Artificial Intelligence from Punjabi University. Dr. Garg's profound knowledge and dedication drive our team's progress. His commitment to nurturing talent inspires us to reach new heights. Dr. Kamal plays a key role in the smooth execution of all our events.
+                    </p>
+                </div>
+                <div>
+                    <img class="facultyimage facultyimageright" src="images/pics/KamalSir.jpg" alt="photo">
+                </div>
+                <script>
+                    gsap.registerPlugin(ScrollTrigger);
+              gsap.to(".facultyimageright",{
+                x: 0,
+                opacity: 1,
+                duration: 4,
+                ease: "power2.out", // You can experiment with different easing functions
+                        scrollTrigger: {
+                            trigger: ".contentfaculty2main",
+                            start: "top center",
+                            end:"center center",  
+                            scrub: true // Smoothly scrub through the animation as you scroll
+                        }
+        
+              })
+              gsap.to(".facultyanimation1",{
+                x: 0,
+                opacity: 1,
+                duration: 4,
+                ease: "power2.out", // You can experiment with different easing functions
+                        scrollTrigger: {
+                            trigger: ".contentfaculty2main",
+                            start: "top center",
+                            end:"center center",                            
+                            scrub: true // Smoothly scrub through the animation as you scroll
+                        }
+        
+              })
+              </script>
+            </div>
+            <div class="contentfaculty2main triggerfaculty">
+                <div>
+                    <img class="facultyimage facultyanimation2" src="images/VandanaMam.jpg" alt="photo">
+                </div>
+                <div class="contentfaculty2 facultyright">
+                    <h1>Dr. Vandana Mohindru Sood</h1>
+                    <h6>Associate Lead - Evolve AI</h6>
+                    <p>Dr. Vandana Mohindru Sood, Assistant Professor at Chitkara University, holds a Ph.D. in Computer Science from Jaypee University of Information Technology. With expertise in Security, Wireless Sensor Networks, and IoT, she enriches our team with dedication and diverse skills.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".facultyright",{
+        x: 0,
+        opacity: 1,
+        duration: 4,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".triggerfaculty",
+                    start: "top center",
+                    end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      gsap.to(".facultyanimation2",{
+        x: 0,
+        opacity: 1,
+        duration: 4,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".triggerfaculty",
+                    start: "top center",
+                    end:"center center",                            
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      </script>
+    </section>
+
+    <section class="sectioncoreteam">
+        <h1 class="coreteamheading text-center"><span class="headingcoreteam">Leads</span> Of Evolve AI</h1>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".coreteamheading",{
+        scale: 1,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".coreteamheading",
+              
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      </script>
+        <div class="coreteamcontentleft trig1">
+            <div class="coreteamcontent1 ani1">
+                <h1>Ravinder Pratap Singh Ahluwalia</h1>
+                <h6><span class="headingcoreteam1">President</span> - Evolve AI</h6>
+                <p>The position of President is a well-deserved recognition of Mr. Ravinder Pratap Singh Alhuwalia's tireless dedication and commitment to the club's success. His visionary leadership, combined with his strategic thinking and skillful planning, has demonstrably propelled the club forward.</p>
+                <div>
+                    <a href="https://www.linkedin.com/in/ravinderpsahluwalia/"><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                      </svg></a>
+                 
+                </div>
+            </div>
+            <div class="im1">
+                <img src="images/pics/coreteam/ravi.jpg" alt="photo">
+            </div>
+        </div>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".ani1",{
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".trig1",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      gsap.to(".im1",{
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".trig1",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      </script>
+
+        <div class="coreteamcontentleft right trig2">
+            <div class="im2">
+                <img src="images/pics/coreteam/sharma.jpg" alt="photo">
+            </div>
+            <div class="coreteamcontent1 ani2">
+                <h1>Ishaan Sharma</h1>
+                <h6><span class="headingcoreteam1">Vice President</span> - Evolve AI</h6>
+                <p>The club is fortunate to have a Vice President like Mr. Ishaan Sharma. His calm demeanor and logical decision-making inspire confidence and guide every member. His unwavering determination to propel Evolve AI to the forefront is a driving force for the club's success.</p>
+                <div>
+                    <a href="https://www.linkedin.com/in/ishaan-sharma-gc/"><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                      </svg></a>
+                </div>
+            </div>
+            
+        </div>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".ani2",{
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".trig2",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      gsap.to(".im2",{
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".trig2",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      </script>
+
+        <div class="coreteamcontentleft trig3">
+            <div class="coreteamcontent1 ani3">
+                <h1>Shivam Aggarwal</h1>
+                <h6><span class="headingcoreteam1">Executive Head</span> - Evolve AI</h6>
+                <p>The club thrives under the leadership of our resourceful executive head, Mr. Shivam Aggarwal. His exceptional problem-solving skills, a true "key master," consistently unlock solutions no matter the challenge. His swift and flawless execution inspires confidence and motivates everyone in the club to achieve their best.</p>
+                <div>
+                    <a href="https://www.linkedin.com/in/ashivam179/"><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                      </svg></a>
+                  
+                </div>
+            </div>
+            <div class="im3">
+                <img src="images/pics/coreteam/shivam.jpg" alt="photo">
+            </div>
+        </div>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".ani3",{
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".trig3",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      gsap.to(".im3",{
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".trig3",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      </script>
+        <div class="coreteamcontentleft right trig4">
+            <div class="im4">
+                <img src="images/pics/coreteam/ishaan.jpg" alt="photo">
+            </div>
+            <div class="coreteamcontent1 ani4">
+                <h1>Ishaan Malhotra</h1>
+                <h6><span class="headingcoreteam1">Technical Head</span> - Evolve AI</h6>
+                <p>As our Technical Head, Mr. Ishaan Malhotra's mastery of web design and profound expertise in data science are invaluable assets. His proficiency in both domains has transformed the club's online presence, making it not only more accessible but also highly user-friendly. Moreover, his established proficiency in data science adds a new dimension to his contributions, fueling innovation and propelling the club to new heights.</p>
+                <div>
+                    <a href="https://www.linkedin.com/in/ishaan-malhotra-7aa3a7250/"><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                      </svg></a>
+                  
+                </div>
+            </div>
+            
+            </div>
+            <script>
+                gsap.registerPlugin(ScrollTrigger);
+          gsap.to(".ani4",{
+            y: 0,
+            opacity: 1,
+            duration: 2,
+            ease: "power2.out", // You can experiment with different easing functions
+                    scrollTrigger: {
+                        trigger: ".trig4",
+                        start: "top center",
+                                end:"center center",  
+                        scrub: true // Smoothly scrub through the animation as you scroll
+                    }
+    
+          })
+          gsap.to(".im4",{
+            y: 0,
+            opacity: 1,
+            duration: 2,
+            ease: "power2.out", // You can experiment with different easing functions
+                    scrollTrigger: {
+                        trigger: ".trig4",
+                        start: "top center",
+                                end:"center center",  
+                        scrub: true // Smoothly scrub through the animation as you scroll
+                    }
+    
+          })
+          </script>
+        <div class="coreteamcontentleft trig5">
+            <div class="coreteamcontent1 ani5">
+                <h1>Sanya Sagar</h1>
+                <h6><span class="headingcoreteam1">Creative Head</span> - Evolve AI</h6>
+                <p>The club's reputation thrives under the leadership of our visionary Creative Head, Ms. Sanya Sagar. Her exceptional eye for captivating design and boundless creativity breathe life into all our visual communications. Her dedication and exceptional task management skills make every project is a success. </p>
+                <div>
+                    <a href="https://www.linkedin.com/in/kirat-kaur-ai/"><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                      </svg></a>
+                
+                </div>
+            </div>
+            <div class="im5">
+                <img src="images/pics/coreteam/sanya.jpg" alt="photo">
+            </div>
+        </div>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".ani5",{
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".trig5",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      gsap.to(".im5",{
+        scale: 1,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".trig5",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      </script>
+        <div class="coreteamcontentleft right trig6">
+            <div class="im6">
+                <img src="images/pics/coreteam/kirat.jpg" alt="photo">
+            </div>
+            <div class="coreteamcontent1 ani6">
+                <h1>Kirat Kaur</h1>
+                <h6><span class="headingcoreteam1">Lead of Operations</span> - Evolve AI</h6>
+                <p>The club's success is fueled by the exceptional leadership of our Operations Head, Ms. Kirat Kaur. Her unwavering dedication goes beyond simply managing tasks. She spearheads initiatives, transforming them into immaculate events. Her masterful leadership skills are a constant source of inspiration and ensure the club runs smoothly and efficiently.</p>
+                <div>
+                    <a href="https://www.linkedin.com/in/kirat-kaur-ai/"><svg xmlns="http://www.w3.org/2000/svg" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                      </svg></a>
+                
+                </div>
+            </div>
+            
+        </div>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".ani6",{
+        scale: 1,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".trig6",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      gsap.to(".im6",{
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".trig6",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      </script>
+    </section>
+
+    <section>
+        <div class="containermain trigg1">
+            <h1 class="hcontent text-left hleft">Content Writers</h1>
+            <div class="containerteam conteam">
+                <div class="a1">
+                    <img src="images/pics/content/IMG_9018.jpg" alt="photo">
+                    <h6>Anshita Bathla</h6>
+                </div>
+                <div class="a2">
+                    <img src="images/pics/content/IMG_9023.jpg" alt="photo">
+                    <h6>Jasmine Dhamija</h6>
+                </div>
+                <div class="a3">
+                    <img src="images/pics/public orators/IMG_9059.png" alt="photo">
+                    <h6>Tia Jindal</h6>
+                </div>
+                <div class="a4">
+                    <img src="images/pics/content/IMG_9020.jpg" alt="photo">
+                    <h6>Abhishek Kumar</h6>
+                </div>
+            </div>
+        </div>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".hcontent",{
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".hcontent",
+              
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      gsap.to(".conteam",{
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".conteam",
+                    start: "top center",
+                    end: "center center", 
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      </script> 
+        <div class="containermain trigg2">
+            <h1 class="hevent hright text-right">Event Coordinators</h1>
+            <div class="containerteam bottom eveteam">
+                <div class="b1">
+                    <img src="images/pics/event coordinators/mukul.jpg" alt="photo">
+                    <h6>Mukul Garg</h6>
+                </div>
+                <div class="b2">
+                    <img src="images/pics/event coordinators/mankirat.png" alt="photo">
+                    <h6>Mankirat Kaur</h6>
+                </div>
+                <div class="b3">
+                    <img src="images/pics/event coordinators/mehak.jpg" alt="photo">
+                    <h6>Mehak Malhotra</h6>
+                </div>
+            </div>
+        </div>
+         <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".hevent",{
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".hevent",
+              
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      gsap.to(".eveteam",{
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".eveteam",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+    </script>
+        <div class="containermain trigg3">
+            <h1 class="hleft hpublic text-left">Public Orators</h1>
+            <div class="containerteam pubteam">
+                <div class="c1">
+                    <img src="images/pics/public orators/IMG_1819.png" alt="photo">
+                    <h6>Parth Mehta</h6>
+                </div>
+                <div class="c2">
+                    <img src="images/pics/public orators/IMG_20240202_121608494_HDR_AE.jpg" alt="photo">
+                    <h6>Shubhangi Mishra</h6>
+                </div>
+             
+            </div>
+        </div>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".hpublic",{
+        scale: 1,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".hpublic",
+              
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      gsap.to(".pubteam",{
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".hpublic",
+                     
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+     
+      </script> 
+        <div class="containermain trigg4">
+            <h1 class="htech hright text-right">Technical Team</h1>
+            <div class="containerteam bottom tecteam">
+                <div class="d1">
+                    <img src="images/pics/technical/tech2.jpg" alt="photo">
+                    <h6>Kushagra Kataria</h6>
+                </div>
+                <div class="d2">
+                    <img src="images/pics/technical/tech3.jpg" alt="photo">
+                    <h6>Ridhima</h6>
+                </div>
+                <div class="d3">
+                    <img src="images/pics/technical/tech1.jpg" alt="photo">
+                    <h6>Parneet Kaur</h6>
+                </div>
+            </div>
+        </div>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".htech",{
+        scale: 1,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".htech",
+              
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      gsap.to(".tecteam",{
+        y: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".htech",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      
+      </script> 
+        <div class="containermain trigg5">
+            <h1 class="hleft hvisual text-left">Visual Creators</h1>
+            <div class="containerteam visteam">
+                <div class="e1">
+                    <img src="images/pics/graphic/IMG_9063.png" alt="photo">
+                    <h6>Siddhant Walia</h6>
+                </div>
+                <div class="e2">
+                    <img src="images/pics/graphic/IMG_9008.jpg" alt="photo">
+                    <h6>Abhishek Kapoor</h6>
+                </div>
+                <div class="e3">
+                    <img src="images/pics/graphic/IMG_8999.jpg" alt="photo">
+                    <h6>Kashish Arora</h6>
+                </div>
+                <div class="e4">
+                    <img src="images/pics/photo and video/IMG_2767.JPG" alt="photo">
+                    <h6>Sarabjit Sharma</h6>
+                </div>
+                <div class="e5">
+                    <img src="images/pics/photo and video/IMG_2778.JPG" alt="photo">
+                    <h6>Madhav Ahuja</h6>
+                </div>
+            </div>
+        </div>
+         <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".hvisual",{
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".hvisual",
+              
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      gsap.to(".visteam",{
+        x: 0,
+        opacity: 1,
+        duration: 4,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".visteam",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      </script> 
+        <div class="containermain trigg6">
+            <h1 class="hsocial hright text-right">Social Media Handlers</h1>
+            <div class="containerteam bottom socteam">
+                <div class="f1">
+                    <img src="images/pics/social media/arav.jpg">
+                    <h6>Aarav Singla</h6>
+                </div>
+                <div class="f2">
+                    <img src="images/pics/social media/IMG_9051.png">
+                    <h6>Abhinav Dhiman</h6>
+                </div>
+                <div class="f3">
+                    <img src="images/pics/photo and video/IMG_9028.jpg" alt="photo">
+                    <h6>Parth Wadhwa</h6>
+                </div>
+                <div class="f4">
+                    <img src="images/pics/social media/IMG_9072.png" alt="photo">
+                    <h6>Yugen Sevda</h6>
+                </div>
+                <div class="f5">
+                    <img src="images/pics/photo and video/IMG_9025.jpg" alt="photo">
+                    <h6>Abhilakshya Chauhan</h6>
+                </div>
+            </div>
+        </div>
+         <script>
+            gsap.registerPlugin(ScrollTrigger);
+      gsap.to(".hsocial",{
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".hsocial",
+              
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+      gsap.to(".socteam",{
+        x: 0,
+        opacity: 1,
+        duration: 4,
+        ease: "power2.out", // You can experiment with different easing functions
+                scrollTrigger: {
+                    trigger: ".socteam",
+                    start: "top center",
+                            end:"center center",  
+                    scrub: true // Smoothly scrub through the animation as you scroll
+                }
+
+      })
+     
+      </script>
+    </section>
+    
+    <div class="contact-headings">
+        <div class="contact-item">
+            <img src="images/evolveailogo1.png" alt="logo">
+        </div>
+        <div class="contact-item">
+            <h4 class="contact-heading text-center">Address</h4>
+            <p class="contact-info">Chitkara University<br>
+                Chandigarh-Patiala National Highway (NH-64)<br>
+                Rajpura, Punjab 140401<br>
+            </p>
+        </div>
+
+        <div class="contact-item-right">
+            <h4 class="contact-heading text-center">Socials</h4>
+            <p class="contact-info">
+                <i class="fa fa-linkedin" ></i><a class="contact-links" href="https://www.linkedin.com/company/evolveai-cuiet/" target="_blank">Linkedin</a><br>
+                <i class="fa fa-instagram"></i><a class="contact-links" href="https://www.instagram.com/evolveai_cuiet/" target="_blank">Instagram</a><br>
+                <i class="fa fa-youtube"></i><a class="contact-links" href="https://www.youtube.com/@evolveai_cuiet" target="_blank">Youtube</a>
+            </p>
+        </div>
+
+
+    </div>
+
+ 
+
+    <div class="copyright">
+        <p>&copy;2024 . All Rights Reserved</p>
+        <a href="terms.html">Terms & Conditions |</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js">
+    </script>
+</body>
+
+</html>
